@@ -1,5 +1,5 @@
 <div *ngIf="progressionBar">
     {{progressionBar.title}}
-    {{progressionBar.progress }} %
+    {{progressionBar.progress | number:'1.1-5':'fr' }} %
     {{calculateColor(progressionBar.progress)}}
 </div>
