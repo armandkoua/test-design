@@ -7,3 +7,15 @@
 <div>
     <app-progress-bar-list [progressionBars]="_state.progressionBars"></app-progress-bar-list>
 </div>
+
+<div>
+    <div> 
+        <button (click)="reset($event)">Remettre à zero</button>
+    </div>
+    <div> 
+        <button (click)="add5Percent($event)">Ajouter 5%</button>
+    </div>
+    <div> 
+        <button (click)="add5Percent($event)">Ajouter 10%</button>
+    </div>
+</div>

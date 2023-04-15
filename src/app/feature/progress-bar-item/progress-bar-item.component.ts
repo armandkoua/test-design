@@ -8,4 +8,23 @@ import { ProgressionState } from 'src/app/models/progression-state';
 })
 export class ProgressBarItemComponent {
   @Input() progressionBar: ProgressionState | undefined;
+
+  ngOnInit(){
+
+  }
+
+  calculateColor(val:number| undefined){
+    let progress = val ? val:0;
+
+      if (progress >= 0 && progress <= 25)
+        return '#7160E8';
+      else if (progress <= 50)
+        return '#60E8B6';
+      else if (progress <= 75)
+        return '#60ADE8';
+      else if (progress <= 100)
+        return '#30DB63';  
+      else 
+      return ''; 
+  }
 }
